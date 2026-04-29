@@ -12,26 +12,29 @@
   display:flex;
   justify-content:center;
   align-items:center;
-  background:linear-gradient(120deg,#ff00cc,#333399,#ff4fd8);
-  background-size:200% 200%;
-  animation:bg 8s ease infinite;
+  position:relative;
+  background:url("https://scontent.fmnl17-4.fna.fbcdn.net/v/t39.30808-6/682681394_4429896530662873_8243960923921595371_n.webp?stp=dst-jpg_tt6&_nc_cat=105&ccb=1-7&_nc_sid=d75a4d&_nc_eui2=AeFE_bqkfi7tNv1mL6pSXuNrxzIjU_1kYz7HMiNT_WRjPoSPv4lpGDG-9CpYKvbYfVD5xKf1ihWIgMGgmWF2VYBE&_nc_ohc=I6c0shU6JJcQ7kNvwETzgVD&_nc_oc=AdrYkYEElKlC4WmGLKC519-L5WoSItYXVP3vDA9E4sNz7ZZplgPq2pnBMRQtwO65Hg8&_nc_zt=23&_nc_ht=scontent.fmnl17-4.fna&_nc_gid=_hwm7vE4PKuAlOr4LErHvQ&_nc_ss=7b2a8&oh=00_Af0uiyyzkJK_vcLx9GsGljhCNoA9dGXK3ZM8Kfns_0G-Ag&oe=69F7F420") center/cover no-repeat;
 }
 
-@keyframes bg{
-  0%,100%{background-position:0 50%}
-  50%{background-position:100% 50%}
+.login::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:rgba(0,0,0,.55);
 }
 
 .card{
+  position:relative;
+  z-index:1;
   width:320px;
   padding:35px;
   text-align:center;
   color:#fff;
-  border-radius:20px;
-  background:rgba(255,255,255,.12);
+  background:rgba(0,0,0,.45);
   backdrop-filter:blur(18px);
-  border:1px solid rgba(255,255,255,.25);
-  box-shadow:0 25px 60px rgba(0,0,0,.25);
+  border:1px solid rgba(255,255,255,.2);
+  border-radius:20px;
+  box-shadow:0 25px 60px rgba(0,0,0,.4);
   transition:.3s;
 }
 
@@ -47,14 +50,17 @@ input,button{
 }
 
 button{
-  background:#fff;
-  color:#333399;
+  background:#ff0000;
+  color:#fff;
   font-weight:bold;
   cursor:pointer;
   transition:.3s;
 }
 
-button:hover{transform:translateY(-5px)}
+button:hover{
+  transform:translateY(-5px);
+  background:#000;
+}
 </style>
 </head>
 
@@ -62,7 +68,7 @@ button:hover{transform:translateY(-5px)}
 
 <section class="login">
   <div class="card">
-    <h2>👨🏻‍💻 Login</h2>
+    <h2>❤️ Login 👀</h2>
     <form>
       <input type="email" placeholder="Email" required>
       <input type="password" placeholder="Password" required>
